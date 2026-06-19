@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SDK Edits Official | S. Dinesh Kumar</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="loading">
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="preloader-logo">
+    <div class="preloader-logo-text">
+      <span class="sdk-letter">S</span>
+      <span class="sdk-letter">D</span>
+      <span class="sdk-letter">K</span>
+    </div>
+    <div class="preloader-bar-line"></div>
+    <div class="preloader-tagline">Edits Official</div>
+  </div>
+</div>
+
+<!-- HEADER + NAVIGATION -->
+<site-header id="siteHeader">
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo"><span class="sdk-nav-letter">S</span><span class="sdk-nav-letter">D</span><span class="sdk-nav-letter">K</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#videos">Work</a></li>
+      <li><a href="#photos">Gallery</a></li>
+      <li><a href="#pricing">Packages</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="https://wa.me/917708509295" class="nav-cta" target="_blank">Book Now</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMobile()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+</site-header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="#videos" onclick="closeMobile()">Work</a>
+  <a href="#photos" onclick="closeMobile()">Gallery</a>
+  <a href="#pricing" onclick="closeMobile()">Packages</a>
+  <a href="#reviews" onclick="closeMobile()">Reviews</a>
+  <a href="https://wa.me/917708509295" target="_blank" onclick="closeMobile()">Book Now</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-overlay"></div>
+</section>
+
+<!-- HERO BUTTONS — OUTSIDE / BELOW THE IMAGE -->
+<div class="hero-buttons-bar">
+  <a href="#videos" class="btn-primary btn-shine-wrap">
+    <span class="shine-sweep"></span>
+    View Portfolio
+  </a>
+  <button class="btn-secondary" onclick="openBooking('Premium')">Book Now</button>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-header fade-in">
+    <div class="section-eyebrow">Who I Am</div>
+    <h2 class="section-title">About Me</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="about-grid">
+    <div class="about-visual fade-in">
+      <div class="about-portrait">
+        <div class="about-portrait-inner">SDK</div>
+      </div>
+      <div class="about-stats">
+        <div class="stat-box">
+          <div class="stat-number">3+</div>
+          <div class="stat-label">Years Exp.</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">200+</div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">50+</div>
+          <div class="stat-label">Clients</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">∞</div>
+          <div class="stat-label">Passion</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-text fade-in">
+      <h3>Hello, I'm <span style="background:linear-gradient(135deg,#8B6914,#C9A84C,#F0D080);background-size:200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:goldShine 3s ease infinite">S. Dinesh Kumar</span></h3>
+      <p>A passionate professional editor and photographer dedicated to transforming ordinary visuals into powerful cinematic experiences.</p>
+      <p>With expertise in advanced video editing, photography, color grading, and digital content creation, I help individuals, brands, businesses, and creators present their stories in the most engaging way possible.</p>
+      <p>My editing approach focuses on storytelling, visual impact, emotional engagement, and modern social-media-ready content. Every project is carefully crafted to maintain professional quality while matching the client's vision and goals.</p>
+      <div class="skills-grid">
+        <span class="skill-tag">Cinema Editing</span>
+        <span class="skill-tag">Color Grading</span>
+        <span class="skill-tag">Reels &amp; Shorts</span>
+        <span class="skill-tag">Wedding Films</span>
+        <span class="skill-tag">Photography</span>
+        <span class="skill-tag">YouTube Content</span>
+        <span class="skill-tag">Motion Graphics</span>
+        <span class="skill-tag">Promotional Videos</span>
+        <span class="skill-tag">Thumbnail Design</span>
+        <span class="skill-tag">Frame Designing</span>
+        <span class="skill-tag">Social Media Content</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section id="videos">
+  <div class="section-header fade-in" style="position:relative">
+    <div class="section-eyebrow">Showreel</div>
+    <h2 class="section-title">Best Editing Videos</h2>
+    <div class="section-line"></div>
+    <button onclick="openAdminPortal('videos')" class="video-admin-btn" title="Admin Panel">⚙ Admin</button>
+  </div>
+  <div class="fade-in">
+    <div class="video-slider-container">
+      <div class="video-slider" id="videoSlider">
+        <!-- Video cards rendered by JS -->
+      </div>
+    </div>
+    <div class="slider-controls">
+      <button class="slider-btn" onclick="slideVideos(-1)">&#8592;</button>
+      <button class="slider-btn" onclick="slideVideos(1)">&#8594;</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- PHOTOS -->
+<section id="photos">
+  <div class="section-header fade-in">
+    <div class="section-eyebrow">Gallery</div>
+    <h2 class="section-title">Best Editing Photos</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="fade-in">
+    <div class="filter-tabs" id="filterTabs">
+      <button class="filter-tab active" onclick="filterPhotos('all', this)">All</button>
+      <button class="filter-tab" onclick="filterPhotos('Wedding', this)">Wedding</button>
+      <button class="filter-tab" onclick="filterPhotos('Portrait', this)">Portrait</button>
+      <button class="filter-tab" onclick="filterPhotos('Nature', this)">Nature</button>
+      <button class="filter-tab" onclick="filterPhotos('Cinematic', this)">Cinematic</button>
+      <button class="filter-tab" onclick="filterPhotos('Event', this)">Event</button>
+      <button class="filter-tab" onclick="filterPhotos('Social Media', this)">Social Media</button>
+    </div>
+    <div class="photo-grid" id="photoGrid"></div>
+
+      </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="section-header fade-in">
+    <div class="section-eyebrow">Service Packages</div>
+    <h2 class="section-title">Choose Your Package</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="pricing-grid fade-in">
+    <!-- Normal -->
+    <div class="pricing-card">
+      <div class="pricing-tier">Starter</div>
+      <div class="pricing-name">Normal</div>
+      <div class="pricing-desc">For basic editing needs</div>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li>Basic Color Correction</li>
+        <li>Basic Transitions</li>
+        <li>Reels Editing</li>
+        <li>Standard Delivery</li>
+      </ul>
+      <div class="pricing-recommended">Ideal for <span>Social Media · Personal Projects</span></div>
+      <button class="btn-primary" style="width:100%" onclick="openBooking('Normal Plan')">Book Normal Plan</button>
+    </div>
+    <!-- Pro -->
+    <div class="pricing-card featured">
+      <div class="pricing-badge">Popular</div>
+      <div class="pricing-tier">Creator</div>
+      <div class="pricing-name">Pro</div>
+      <div class="pricing-desc">For creators &amp; businesses</div>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li>Professional Editing</li>
+        <li>Cinematic Transitions</li>
+        <li>Advanced Color Grading</li>
+        <li>Motion Graphics</li>
+        <li>Faster Delivery</li>
+      </ul>
+      <div class="pricing-recommended">Ideal for <span>YouTubers · Influencers · Small Biz</span></div>
+      <button class="btn-primary" style="width:100%" onclick="openBooking('Pro Plan')">Book Pro Plan</button>
+    </div>
+    <!-- Premium -->
+    <div class="pricing-card">
+      <div class="pricing-tier">Elite</div>
+      <div class="pricing-name">Premium</div>
+      <div class="pricing-desc">For premium projects</div>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li>Cinematic Editing</li>
+        <li>Premium Color Grading</li>
+        <li>Advanced Motion Graphics</li>
+        <li>Visual Effects</li>
+        <li>Priority Support</li>
+        <li>Fastest Delivery</li>
+      </ul>
+      <div class="pricing-recommended">Ideal for <span>Brands · Wedding Films · Commercial</span></div>
+      <button class="btn-primary" style="width:100%" onclick="openBooking('Premium Plan')">Book Premium Plan</button>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING MODAL -->
+<div id="booking-overlay" onclick="handleOverlayClick(event)">
+  <div class="booking-modal">
+    <button class="modal-close" onclick="closeBooking()">✕</button>
+    <div class="modal-title">Book a Session</div>
+    <div class="modal-subtitle" id="modalPkgLabel">Selected Package</div>
+    <div class="form-group">
+      <label class="form-label">Your Name *</label>
+      <input class="form-control" type="text" id="bName" placeholder="Enter your full name">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Phone Number *</label>
+      <input class="form-control" type="tel" id="bPhone" placeholder="+91 00000 00000">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Email Address (Optional)</label>
+      <input class="form-control" type="email" id="bEmail" placeholder="your@email.com">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Service Required *</label>
+      <select class="form-control" id="bService">
+        <option value="">— Select a Service —</option>
+        <option>Video Editing</option>
+        <option>Photo Editing</option>
+        <option>Photography</option>
+        <option>Videography</option>
+        <option>Frame Making</option>
+        <option>YouTube Content Creation</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Selected Package</label>
+      <input class="form-control form-package" type="text" id="bPackage" readonly>
+    </div>
+    <button class="whatsapp-btn" onclick="submitBooking()">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>
+      Send via WhatsApp
+    </button>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <div id="lightboxContent" style="text-align:center">
+    <div id="lightboxImg" style="width:60vw;height:70vh;background:var(--dark2);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:3rem;color:var(--gold);border:1px solid rgba(201,168,76,0.2)">📷</div>
+  </div>
+</div>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="section-header fade-in">
+    <div class="section-eyebrow">Testimonials</div>
+    <h2 class="section-title">Client Reviews &amp; Feedback</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="reviews-layout fade-in">
+    <div class="review-form-wrap">
+      <h3>Leave a Review</h3>
+      <div class="stars-input" id="starsInput">
+        <button class="star-btn" data-star="1" onclick="setRating(1)">★</button>
+        <button class="star-btn" data-star="2" onclick="setRating(2)">★</button>
+        <button class="star-btn" data-star="3" onclick="setRating(3)">★</button>
+        <button class="star-btn" data-star="4" onclick="setRating(4)">★</button>
+        <button class="star-btn" data-star="5" onclick="setRating(5)">★</button>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Your Name</label>
+        <input class="form-control" type="text" id="rName" placeholder="Enter your name">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Your Feedback</label>
+        <textarea class="form-control" id="rText" rows="5" placeholder="Share your experience..." style="resize:vertical"></textarea>
+      </div>
+      <button class="btn-primary" onclick="submitReview()" style="margin-top:8px">Submit Review</button>
+    </div>
+    <div>
+      <div style="font-family:var(--font-ui);font-size:0.65rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--gold);margin-bottom:24px">Client Testimonials</div>
+      <div class="reviews-list" id="reviewsList"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <span class="footer-brand-logo">SDK</span>
+      <p class="footer-desc">Professional editor and photographer crafting cinematic stories that connect, inspire, and leave lasting impressions.</p>
+      <div class="social-links">
+        <a href="https://wa.me/917708509295" target="_blank" class="social-link" title="WhatsApp">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>
+        </a>
+        <a href="https://www.instagram.com/sdk_edits_official" target="_blank" class="social-link" title="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-nav-title">Navigation</div>
+      <ul class="footer-nav">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#videos">Best Videos</a></li>
+        <li><a href="#photos">Photo Gallery</a></li>
+        <li><a href="#pricing">Packages</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-nav-title">Contact</div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-icon">📱</span>
+        <div class="footer-contact-text">
+          <a href="tel:+917708509295">+91 77085 09295</a>
+        </div>
+      </div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-icon">💬</span>
+        <div class="footer-contact-text">
+          <a href="https://wa.me/917708509295" target="_blank">WhatsApp Chat</a>
+        </div>
+      </div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-icon">📷</span>
+        <div class="footer-contact-text">
+          <a href="https://www.instagram.com/sdk_edits_official" target="_blank">@sdk_edits_official</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 SDK Edits Official · S. Dinesh Kumar · All Rights Reserved</div>
+    <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Back to Top</button>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+<!-- ═══════════════════ ADMIN PORTAL ═══════════════════ -->
+<div id="adminPortal" style="display:none">
+  <div class="admin-portal-inner">
+
+    <!-- ══ LOGIN CARD (steps 1–4) ══ -->
+    <div class="admin-login-card" id="apLoginCard">
+      <button class="admin-portal-close" onclick="closeAdminPortal()" type="button">✕</button>
+
+      <!-- Brand mark -->
+      <div class="ap-brand">
+        <div class="ap-brand-icon">SDK</div>
+        <div class="ap-brand-text">SDK Edits Official<br>Admin Portal</div>
+      </div>
+
+      <!-- Step progress dots -->
+      <div class="ap-steps-dots" id="apDots">
+        <div class="ap-dot active" id="dot0"></div>
+        <div class="ap-dot" id="dot1"></div>
+        <div class="ap-dot" id="dot2"></div>
+        <div class="ap-dot" id="dot3"></div>
+      </div>
+
+      <!-- ── STEP 1: LOGIN ── -->
+      <div class="ap-step active" id="apStepLogin">
+        <div class="ap-step-title">Welcome Back</div>
+        <div class="ap-step-sub">Sign in to your admin panel</div>
+
+        <div class="ap-form-group">
+          <label class="ap-label">Username</label>
+          <input class="ap-input" type="text" id="apUsername" placeholder="Enter username"
+            autocomplete="off" onkeydown="if(event.key==='Enter')doLogin()">
+        </div>
+        <div class="ap-form-group">
+          <label class="ap-label">Password</label>
+          <input class="ap-input" type="password" id="apPassword" placeholder="Enter password"
+            onkeydown="if(event.key==='Enter')doLogin()" style="padding-right:44px">
+          <button class="ap-eye" onclick="togglePassVis()" id="apEye" type="button">👁</button>
+        </div>
+
+        <div class="ap-error" id="apLoginError">Incorrect username or password.</div>
+        <button class="ap-btn" onclick="doLogin()" type="button">Sign In →</button>
+
+        <div class="ap-forgot" id="apForgotLink">
+          <button onclick="goToForgot()" type="button">Forgot Password?</button>
+        </div>
+      </div>
+
+      <!-- ── STEP 2: SEND OTP ── -->
+      <div class="ap-step" id="apStepForgot">
+        <button class="ap-back" onclick="goToLogin()" type="button">← Back to Login</button>
+        <div class="ap-step-title">Reset Password</div>
+        <div class="ap-step-sub">Step 2 of 3 — Verify Identity</div>
+        <div class="ap-divider"></div>
+        <p class="otp-info">
+          A 4-digit OTP will be sent as an SMS to your registered number<br>
+          <strong style="color:var(--gold);font-size:1.1rem;letter-spacing:0.05em">+91 7708509295</strong>
+        </p>
+        <button class="ap-btn" onclick="sendOTP()" type="button">Send OTP via SMS →</button>
+        <div id="apOtpSendMsg" style="display:none;text-align:center;margin-top:16px;font-family:var(--font-ui);font-size:0.72rem;color:#4caf50;letter-spacing:0.1em;padding:10px;background:rgba(76,175,80,0.08);border-radius:4px"></div>
+      </div>
+
+      <!-- ── STEP 3: ENTER OTP ── -->
+      <div class="ap-step" id="apStepOtp">
+        <button class="ap-back" onclick="goToForgot()" type="button">← Back</button>
+        <div class="ap-step-title">Enter OTP</div>
+        <div class="ap-step-sub">Step 3 of 3 — Enter the code</div>
+        <div class="ap-divider"></div>
+        <p class="otp-info">Enter the 4-digit code sent to<br><strong style="color:var(--gold)">+91 7708509295</strong></p>
+        <div class="otp-boxes">
+          <input class="otp-box" type="tel" maxlength="1" id="otp0" oninput="otpMove(0)" onkeydown="otpBack(event,0)">
+          <input class="otp-box" type="tel" maxlength="1" id="otp1" oninput="otpMove(1)" onkeydown="otpBack(event,1)">
+          <input class="otp-box" type="tel" maxlength="1" id="otp2" oninput="otpMove(2)" onkeydown="otpBack(event,2)">
+          <input class="otp-box" type="tel" maxlength="1" id="otp3" oninput="otpMove(3)" onkeydown="otpBack(event,3)">
+        </div>
+        <div class="ap-error" id="apOtpError">Incorrect OTP. Please try again.</div>
+        <button class="ap-btn" onclick="verifyOTP()" type="button">Verify OTP →</button>
+        <div class="otp-resend">Didn't receive? <button onclick="sendOTP()" type="button">Resend OTP</button></div>
+      </div>
+
+      <!-- ── STEP 4: NEW PASSWORD ── -->
+      <div class="ap-step" id="apStepNewPass">
+        <div class="ap-step-title">New Password</div>
+        <div class="ap-step-sub">Create a strong password</div>
+        <div class="ap-divider"></div>
+        <div class="ap-form-group">
+          <label class="ap-label">New Password</label>
+          <input class="ap-input" type="password" id="apNewPass" placeholder="Enter new password">
+        </div>
+        <div class="ap-form-group">
+          <label class="ap-label">Confirm Password</label>
+          <input class="ap-input" type="password" id="apConfirmPass" placeholder="Confirm new password"
+            onkeydown="if(event.key==='Enter')saveNewPassword()">
+        </div>
+        <div class="ap-error" id="apNewPassError">Passwords do not match.</div>
+        <button class="ap-btn" onclick="saveNewPassword()" type="button">Save Password →</button>
+      </div>
+
+    </div><!-- /admin-login-card -->
+
+    <!-- ══ DASHBOARD (after login) ══ -->
+    <div class="admin-dashboard" id="apDashboard" style="display:none">
+
+      <!-- Header -->
+      <div class="dash-header">
+        <div>
+          <div class="dash-title">Admin Dashboard</div>
+          <div class="dash-sub">Logged in as sdk_edits</div>
+        </div>
+        <div class="dash-actions">
+          <button class="dash-logout" onclick="adminLogout()" type="button">Logout</button>
+          <button class="admin-portal-close" style="position:static" onclick="closeAdminPortal()" type="button">✕</button>
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="dash-tabs">
+        <button class="dash-tab active" onclick="switchDashTab('videos',this)" type="button">🎬 Videos</button>
+        <button class="dash-tab" onclick="switchDashTab('photos',this)" type="button">🖼 Photos</button>
+      </div>
+
+      <!-- VIDEOS PANEL -->
+      <div class="dash-panel active" id="dashVideos">
+        <div class="dash-upload-area" id="dashVideoDrop"
+          onclick="document.getElementById('dashVideoInput').click()"
+          ondragover="event.preventDefault();this.classList.add('drag-over')"
+          ondragleave="this.classList.remove('drag-over')"
+          ondrop="dashHandleVideoDrop(event)">
+          <div class="dash-upload-icon">🎬</div>
+          <div class="dash-upload-label">Click or Drag & Drop Videos Here</div>
+          <div class="dash-upload-hint">MP4 · MOV · AVI · MKV supported</div>
+          <input type="file" id="dashVideoInput" accept="video/*" multiple style="display:none"
+            onchange="dashHandleVideoFiles(this.files)">
+        </div>
+        <div class="dash-meta">
+          <input class="ap-input" type="text" id="dashVTitle" placeholder="Video Title (optional)">
+          <input class="ap-input" type="text" id="dashVCategory" placeholder="Category (e.g. Wedding)">
+        </div>
+        <button class="dash-browse-btn" onclick="document.getElementById('dashVideoInput').click()" type="button">
+          📁 Browse & Add Videos
+        </button>
+        <div class="dash-media-grid" id="dashVideoGrid">
+          <div class="dash-empty">No videos yet — upload your first video above</div>
+        </div>
+      </div>
+
+      <!-- PHOTOS PANEL -->
+      <div class="dash-panel" id="dashPhotos">
+        <div class="dash-upload-area" id="dashPhotoDrop"
+          onclick="document.getElementById('dashPhotoInput').click()"
+          ondragover="event.preventDefault();this.classList.add('drag-over')"
+          ondragleave="this.classList.remove('drag-over')"
+          ondrop="dashHandlePhotoDrop(event)">
+          <div class="dash-upload-icon">🖼</div>
+          <div class="dash-upload-label">Click or Drag & Drop Photos Here</div>
+          <div class="dash-upload-hint">JPG · PNG · WEBP · GIF supported</div>
+          <input type="file" id="dashPhotoInput" accept="image/*" multiple style="display:none"
+            onchange="dashHandlePhotoFiles(this.files)">
+        </div>
+        <div class="dash-meta">
+          <input class="ap-input" type="text" id="dashPTitle" placeholder="Photo Title (optional)">
+          <select class="ap-input" id="dashPCategory">
+            <option value="">— Category —</option>
+            <option>Wedding</option>
+            <option>Portrait</option>
+            <option>Nature</option>
+            <option>Cinematic</option>
+            <option>Event</option>
+            <option>Social Media</option>
+          </select>
+        </div>
+        <button class="dash-browse-btn" onclick="document.getElementById('dashPhotoInput').click()" type="button">
+          📁 Browse & Add Photos
+        </button>
+        <div class="dash-media-grid" id="dashPhotoGrid">
+          <div class="dash-empty">No photos yet — upload your first photo above</div>
+        </div>
+      </div>
+
+    </div><!-- /admin-dashboard -->
+  </div>
+</div>
+<!-- ═══════════════════ /ADMIN PORTAL ═══════════════════ -->
+
+</body>
+</html>
